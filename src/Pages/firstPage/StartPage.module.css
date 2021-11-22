@@ -1,0 +1,426 @@
+@font-face {
+    font-family: 'ApercuPro';
+    src: local('ApercuPro'), url(../fonts/ApercuPro-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'ApercuPro';
+    src: local('ApercuPro'), url(../fonts/ApercuPro-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'ApercuPro';
+    src: local('ApercuPro'), url(../fonts/ApercuPro-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'ApercuPro';
+    src: local('ApercuPro'), url(../fonts/ApercuPro-Regular.ttf) format('truetype');
+}
+
+.wrapperOfMain {
+    background-image: url(../firstPage/img/pexels-johannes-plenio-2850287\ 1.png);
+    background-size: cover;
+}
+
+.allOfFerstPage {
+    position: relative;
+}
+
+.containerMain {
+    max-width: 1232px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapperMainWeather {
+    max-width: 520px;
+}
+
+.h1 {
+    font-family: ApercuPro, Bolt;
+    font-size: 40px;
+    color: #FFFF;
+    margin-top: 48px;
+    margin-left: 58px;
+    margin-bottom: 0px;
+    position: relative;
+    line-height: 1;
+    z-index: 2;
+}
+
+.h1::before {
+    content: "";
+    background-image: url(../firstPage/img/ci_location.png);
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: -26px;
+    top: 20px;
+    z-index: 2;
+
+}
+
+.narochLake {
+    margin-top: 12px;
+    margin-left: 58px;
+    z-index: 3;
+    position: relative;
+}
+
+
+
+.h2Main {
+    font-family: ApercuPro, Regular;
+    color: #FDFDFD;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 0.9;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    z-index: 2;
+}
+
+.weatherByDays {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 25px;
+    margin-bottom: 88px;
+    position: relative;
+    z-index: 3;
+    color: #FDFDFD;
+}
+
+.wrapperMainWeather {
+    position: relative;
+    width: 520px;
+    display: flex;
+}
+
+.wrapperMainWeather::before {
+        content: '';
+        position: absolute;
+        border-radius: 20px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.308);
+        z-index: 1;
+        box-shadow: 0px 4px 67px rgba(0, 0, 0, 0.57), 0px 4px 65px rgba(0, 0, 0, 0.25); 
+}
+
+.weatherFact {
+    margin-left: 45px;
+    font-family: ApercuPro, Regular;
+    font-size: 48px;
+    color: #FFFF;
+    position: relative;
+    z-index: 3;
+    margin-top: 56px;
+}
+
+.weatherIcon {
+    margin-top: 25px;
+    width: 73px;
+    height: 56px;
+}
+
+.weatherIconFact {
+    width: 120px;
+    height: 80px;
+}
+
+.wrapperOfTime {
+    margin-top: 25px;
+    margin-left: 63px;
+    margin-bottom: 68px;
+}
+
+.time {
+    color: #FFFF;
+    font-family: ApercuPro, Regular;
+    font-size: 24px;
+    position: relative;
+    z-index: 3;
+}
+
+.containerOfAuthentication {
+    max-width: 410px;
+    margin: 0 65px;
+
+}
+
+.wrapperAuthentication {
+    box-shadow: 0px 4px 76px #FDFDFD,
+            inset 0px 4px 67px #FBF7F7;
+    border-radius: 20px;
+    margin-bottom: 107px;
+    margin-top: 80px;
+
+}
+
+.googleAuthent {
+    margin-top: 58px;
+    margin-left: 66px;
+    margin-right: 66px;
+    border: 1px solid #0A153F;
+    border-radius: 10px;
+    position: relative;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    overflow: hidden;   
+}
+
+.google {
+    margin-top: 8px ;
+    margin-left: 60px;
+    margin-right: 26px;
+    margin-bottom: 8px;
+    font-family: ApercuPro, Medium;
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* .googleAuthent::before {
+    content: "";
+    background-image: url("../firstPage/img/flat-color-icons_google.png");
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    transform: translate(-50%, -50%);
+    top: 20px;
+    left: 45px;
+} */
+
+
+.continueWithGoogle {
+    margin-top: 35px;
+    margin-left: 40px;
+}
+
+
+.or {
+    width: 10px;
+    margin: 0 auto;
+    margin-top: 24px;
+    font-family: ApercuPro, Medium;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.formEmail {
+    max-width: 270px;
+    margin: 0 auto;
+    border: 1px solid #0A153F;
+    border-radius: 10px;
+}
+
+.inputEmail {
+    background: transparent;
+    border: none;
+    padding-left: 17px;
+    padding-bottom: 5px;
+}
+
+.inputEmail:focus {
+    outline: none;
+}
+
+.forPassword {
+    max-width: 270px;
+    margin: 0 auto;
+    border: 1px solid #0A153F;
+    border-radius: 10px;
+    margin-top: 18px;
+}
+
+.inputPassword {
+    background: transparent;
+    border: none;
+    padding-left: 17px;
+    padding-bottom: 5px;
+}
+
+.inputPassword:focus {
+    outline: none;
+}
+
+.wrapperOfButtonLogin {
+
+    max-width: 270px;
+    margin: 0 auto;
+    margin-top: 18px;
+}
+
+.loginButton {
+    width: 270px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0A153F;
+}
+
+.login {
+    color: #FFFF;
+    font-family: ApercuPro, Medium;
+    font-size: 18px;
+    margin-top: 11px;
+    margin-bottom: 9px;
+}
+
+.forgotPass {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    font-family: ApercuPro, Medium;
+    font-size: 18px;
+    color: #0A153F;
+}
+
+.createOne {
+    text-align: center;
+    margin-top: 25px;
+    font-family: ApercuPro, Medium;
+    font-size: 18px;
+    color: #083570;
+    margin-bottom: 84px;
+}
+
+.noAcc {
+    color: #7E7E7E;
+    font-family: ApercuPro, Medium;
+    font-size: 18px;
+}
+
+.partTwo {
+    max-width: 1232px;
+    margin: 0 auto;
+}
+
+.howWe {
+    margin-top: 60px;
+    text-align: center;
+    font-family: ApercuPro, Bolt;
+    font-size: 40px;
+    color: #0A153F;
+}
+
+.elements {
+    display: flex;
+    justify-content: space-between;
+}
+
+.elementPartTwo {
+    /* width: calc((100% - 117px- 117px - 117px)/4); */
+    height: 208px;
+    max-width: 208px;
+    border: 5px solid #0A153F;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.textInElement {
+    font-family: ApercuPro, Regular;
+    font-size: 18px;
+    color: #0A153F;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 23px;
+    margin-right: 20px;
+}
+
+.elementPartTwo {
+
+}
+
+.elementPartTwo:first-child::before {
+    content: "";
+    text-align: center;
+    color: #FFFF;
+    font-family: ApercuPro, Regular;
+    font-size: 24;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #0A153F;
+    position: absolute;
+    transform: translate(-50%,-16%);
+}
+
+.elementPartTwo:last-child::before {
+    content: "";
+    text-align: center;
+    color: #FFFF;
+    font-family: ApercuPro, Regular;
+    font-size: 24;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #0A153F;
+    position: absolute;
+    transform: translate(50%,-16%);
+    right: 0;
+}
+
+.elementPartTwo::nth-last-child(3)::before {
+    content: "2";
+    text-align: center;
+    color: #FFFF;
+    font-family: ApercuPro, Regular;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #0A153F;
+    position: absolute;
+    transform: translate(50%,-16%);
+    
+}
+
+
+.find {
+    text-align: center;
+    margin-top: 60px;
+    font-family: ApercuPro, Regular;
+    font-size: 40px;
+    color: #0A153F;
+    margin-bottom: 0px;
+}
+
+.buttonInPartTwo {
+    max-width: 120px;
+    margin: 0 auto;
+    margin-bottom: 94px;
+}
+
+.buttonPartTwo {
+    max-width: 112px;
+    margin-top: 35px;
+    background-color: #0A153F;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    padding: 11px 24px 11px 24px;
+    color: #FFFF;
+    font-family: ApercuPro, Medium;
+    font-size: 18px;
+
+}
+
+
+
+
+
+
+
+
+
+

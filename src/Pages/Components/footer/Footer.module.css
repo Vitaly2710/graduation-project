@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'ApercuPro';
+    src: local('ApercuPro'), url(../../fonts/ApercuPro-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'ApercuPro';
+    src: local('ApercuPro'), url(../../fonts/ApercuPro-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'ApercuPro';
+    src: local('ApercuPro'), url(../../fonts/ApercuPro-Medium.ttf) format('truetype');
+}
+
+
+.footer {
+    background-image: url(./cold-front-warm-front-hurricane-felix-76969\ 1.png);
+    background-position: center;
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 65px;
+}
+
+.footerConteiner {
+    max-width: 565px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.mainFooter {
+    text-align: center;
+    margin-top: 30px;
+    font-family: ApercuPro, Medium;
+    font-size: 30px;
+    color: #FFFF;
+    position: relative;
+
+}
+
+.wrapperInputFooter {
+    max-width: 215px;
+    margin: 0 auto;
+    background-color: #FFFF;
+    border-radius: 10px;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    padding-left: 18px;
+    
+}
+
+
+.inputFooter {
+    background: transparent;
+    border: none;
+}
+
+.inputFooter:focus {
+    outline: none;
+}
+
+.mainFooter::after {
+    content: "";
+    width: 382px;
+    height: 0px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    top: 150px;
+    left: 280px;
+}
+
+.stayConn {
+    text-align: center;
+    margin-top: 81px;
+    font-family: ApercuPro, Medium;
+    font-size: 30px;
+    color: #FFFF;
+    position: relative;
+}
+
+.stayConn::after {
+    content: "";
+    width: 382px;
+    height: 0px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 100%;
+    transform: translate(-78%, -50%);
+    top: 150px;
+    
+}
+
+.wrapperOfIcons {
+    max-width: 100px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.iconFooter:last-child {
+    margin-top: 3px;
+    width: 35px;
+    height: 35px;
+    margin-left: 3px;
+}
+
+.wrapperEndFooter {
+    max-width: 565px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 54px;
+    justify-content: space-between;
+}
+
+.textFooter {
+    font-family: ApercuPro, Medium;
+    font-size: 18px;
+    color: #FFFF;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0px;
+}
+

@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'ApercuPro';
+    src: local('ApercuPro'), url(../fonts/ApercuPro-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'ApercuPro';
+    src: local('ApercuPro'), url(../fonts/ApercuPro-Light.ttf) format('truetype');
+}
+
+.headerWrapper {
+    background-color: #0A153F;
+}
+
+.header {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    
+}
+
+.wrapSaveEarth {
+    color: #FFFFFF;
+    font-size: 36px;
+    margin-left: 106px;
+    font-family: ApercuPro, Medium;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+
+.wrapperOfEarth {
+    display: flex;
+    margin-left: 46px;
+}
+
+.globAss {
+    font-size: 18px;
+    font-family: ApercuPro, Light;
+    text-align: end;
+    font-weight: 300;
+
+}
+
+.earth {
+    margin-right: 9px;
+    max-height: 32px;
+}
+
+.earth2 {
+    max-width: 32px;
+    max-height: 32px;
+    padding-bottom: 7px;
+}
+
+.wrapperOfcontlog {
+    display: flex;
+    margin-right: 104px;
+    max-width: 256px;
+}
+
+.wrapperContactUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.contactUs {
+    width: 113px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    margin: 10,11,14,14;
+    height: 40px;
+    background-color: #0A153F;
+    color: #FFFFFF;
+    margin-right: 30px;
+    font-family: ApercuPro, Light;  
+    font-size: 18px;
+}
+
+.contactUs:hover {
+    border: 2px solid black;
+    color: brown;
+}
+
+.wrapperLoginHeaderGeneral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+.wrapperLoginHeader {
+    display: flex;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+.wrapperLoginHeader:hover {
+    border: 1px solid red
+}
+
+.loginHeader {
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: ApercuPro, Light;
+    line-height: 1.1;
+}
+
+.loginHeader:hover {
+    border: brown;
+    color: chartreuse;
+}
+
+.wrapImglogin {
+    margin-left: 3px;
+    margin-top: 10px;
+    line-height: 1.1;
+    margin-right: 19px;
+}
+
+.imgLogin:hover {
+    color: chartreuse;
+}
+
+
+.headerWrapper {
+    position: sticky;
+    top:0px;
+    
+}
+
+.imgUser {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.wrapperLoginHeader {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
