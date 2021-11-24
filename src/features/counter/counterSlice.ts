@@ -6,18 +6,20 @@ export interface CounterState {
   value: number;
   status: 'idle' | 'loading' | 'failed';
   googleUser: any | null,
-  latitude:number,
-  longtitude: number,
-  country: string
+  password:string,
+  email: string,
+  country: string,
+  latlon: [number,number]
 }
 
 const initialState: CounterState = {
   value: 0,
   status: 'idle',
   googleUser: null,
-  latitude: 55.75,
-  longtitude: 37.6,
-  country:"Russia"
+  password: '',
+  email: '',
+  country:"Russia",
+  latlon:[55.75, 37.6]
 };
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -39,16 +41,22 @@ export const counterSlice = createSlice({
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
-    changeLat: (state, action: PayloadAction<number>) => {
-      state.latitude = action.payload
+    changePassword: (state, action: PayloadAction<string>) => {
+      state.password = action.payload
     },
-    changeLon: (state, action: PayloadAction<number>) => {
-      state.longtitude = action.payload
+    changeEmail: (state, action: PayloadAction<string>) => {
+      state.email = action.payload
     },
 
     choiceContry : (state, action: PayloadAction<string>) => {
       state.country = action.payload
     },
+
+    changeLatLon: (state, action: PayloadAction<[number,number]>) => {
+      state.latlon = action.payload
+    },
+
+
 
     increment: (state) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
@@ -65,7 +73,7 @@ export const counterSlice = createSlice({
       state.value += action.payload;
     },
 
-    setGoogleUser: (state, action: PayloadAction<object>) => {
+    setGoogleUser: (state, action: PayloadAction<any>) => {
       state.googleUser = action.payload
     }
   },
@@ -83,16 +91,17 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount,setGoogleUser,changeLat, changeLon,choiceContry  } = counterSlice.actions;
+export const { increment, decrement, incrementByAmount,setGoogleUser,changePassword, changeEmail,choiceContry,changeLatLon  } = counterSlice.actions;
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
 export const selectCount = (state: RootState) => state.counter.value;
 export const selectGoogleUser = (state: RootState) => state.counter.googleUser;
-export const selectLatitude = (state: RootState) => state.counter.latitude;
-export const selectLongtitute = (state: RootState) => state.counter.longtitude;
+export const selectPassword = (state: RootState) => state.counter.password;
+export const selectEmail = (state: RootState) => state.counter.email;
 export const selectCountry = (state: RootState) => state.counter.country;
+export const selectlatlon = (state: RootState) => state.counter.latlon;
 
 
 

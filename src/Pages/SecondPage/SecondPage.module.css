@@ -3,6 +3,12 @@
     src: local('ApercuPro'), url(../fonts/ApercuPro-Light.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'ApercuPro';
+    src: local('ApercuPro'), url(../fonts/ApercuPro-Regular.ttf) format('truetype');
+}
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
@@ -10,6 +16,7 @@
     max-width: 1440px;
     padding-top: 39px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .containerWeather {
@@ -53,6 +60,10 @@
 .imgSearch {
     margin-top: 6.5px;
     margin-left: 9px;
+}
+
+.searchButton {
+    margin-left: 5px;
 }
 
 .forecast {
@@ -125,14 +136,206 @@
 
 .wrapperthreeElementsWithWeather {
     display: flex;
+    justify-content: space-between;
 }
 
 .threeElementsWithWeather {
     padding-top: 20px;
-    padding-bottom: 65px;
-    max-width: 336px;
-    margin-left: 20px;
-    margin-right: 31px;
+    /* padding-bottom: 65px; */
+    width: 336px;
+    padding-left: 20px;
+    padding-right: 31px;
+    border-radius: 10px;
+    position: relative;
 
 }
+
+.threeElementsWithWeather::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.20); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+
+.containerElementsWithWeather {
+    display: flex;
+    line-height: 0.9;
+}
+
+.containersearchWeather {
+    display: flex;
+}
+
+
+
+.wrappersearchWeather {
+    max-width: 336px;
+    margin: 0 auto;
+    line-height: 1;
+    margin-top: 40px;
+    margin-left: 426px;
+}
+
+.wrappersearchWeather:first-child {
+    max-width: 336px;
+    margin: 0 auto;
+    line-height: 1;
+    margin-top: 40px;
+}
+
+
+.mainCountryOfthree {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    color: #0A153F;
+    line-height: 1;
+}
+
+
+.humidityInThree {
+    margin-top: 22px;
+    font-family: ApercuPro, Light;
+    color: #0A153F;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.wuindspeedInThree {
+    margin-top: 13px;
+    font-family: ApercuPro, Light;
+    color: #0A153F;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.pressureInThree {
+    margin-top: 13px;
+    font-family: ApercuPro, Light;
+    color: #0A153F;
+    font-size: 18px;
+    margin-bottom: 66px;
+}
+
+.containersearchWeather {
+    margin-right: 66px;
+    border-radius: 20px;
+    /* border: 1px solid #0A153F; */
+    padding: 20px;
+    width: 336px;
+    /* box-shadow: 5px 5px 30px #3145b39c, inset 5px 5px 20px #313ab370; */
+    background: linear-gradient(3deg, #6c8de696, #16014ca1)
+}
+
+.tempInthree {
+    margin-left: 52px;
+}
+
+.temppressureInThree {
+    font-family: ApercuPro, Light;
+    color: #0A153F;
+    font-size: 40px;
+}
+
+.threeElementsWithWeather:first-child::after {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./img/pexels-michalis-pafralis-6214466.jpg);
+    opacity: 0.4;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.threeElementsWithWeather:last-child::after {   
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./img/pexels-roberto-vivancos-2190283.jpg);
+    opacity: 0.4;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.threeElementsWithWeather:nth-child(2)::after {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./img/pexels-davi-pimentel-2064827.jpg);
+    opacity: 0.4;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+map {
+    margin-top: 51px;
+}
+
+.mapHeader {
+    text-align: center;
+    margin-top: 51px;
+    margin-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    color: #0A153F;
+
+}
+
+.wrapperOfNews {
+    padding-top: 57px;
+    padding-bottom: 80px;
+}
+
+.containerOfNews {
+    max-width: 1323px;
+    margin: 0 auto;
+}
+
+.headOfNews {
+    text-align: center;
+    max-width: 224;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    color: #0A153F;
+}
+
+.news {
+    max-width: 336px;
+    margin: 0 auto;
+    margin-top: 50px;
+    
+}
+
+.titleNews {
+    max-width: 264px;
+    margin: 0 auto;
+    margin-top: 27px;
+}
+
+
+
+
 

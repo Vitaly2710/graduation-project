@@ -3,7 +3,8 @@ export interface Fact {
     icon: Icon,
     humidity: number,
     wind_speed: number,
-    pressure_mm:number
+    pressure_mm:number,
+    feels_like: number
 }
 
 export interface Cords {
@@ -24,3 +25,52 @@ export interface AltSpellings {
     1: number,
     2: number
 }
+
+export interface Flags {
+    png: string,
+    svg: string
+}
+
+export interface Geo {
+    country:{id: number, name: string}
+}
+
+export interface Forecast {
+    forecasts: [{},{},{},{},{},{},{}],
+}
+
+export interface NewsDetails {
+
+}
+
+
+
+export interface New {
+    articles: IRepo[]
+}
+
+export interface News { 
+    source: object,
+    author: null,
+    title: string,
+    description: string,
+    url: string,
+    urlToImage: string,
+    publishedAt: string,
+    content: string,
+    [key: string]: any
+}
+
+// export interface News {
+//     url: string;
+//     // [key: string]: any;
+//   }
+
+export type Url = string
+export type Title = string
+export type UrlToImage = string
+
+
+export  interface IRepo {
+    [index: number]: News ;
+  }

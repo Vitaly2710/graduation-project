@@ -9,7 +9,7 @@ import { Fact,  } from "./Api/Type"
 import { Footer } from "../Components/footer/Footer"
 import { GoogleLogin } from 'react-google-login';
 import { useDispatch } from "react-redux"
-import { setGoogleUser } from "../../features/counter/counterSlice"
+import { changeEmail, changePassword, setGoogleUser } from "../../features/counter/counterSlice"
 // import { useQuerry } from "../../app/hooks"
 
 
@@ -56,9 +56,24 @@ export const FirstPage: React.FC<Props> = (props) =>{
       const onFailure = (res:unknown) => {
         console.error(res)
       }
-    
-    
 
+      const [email, setEmail] = useState<string>("example@gmail.com")
+      const [password, setPassword] = useState<string>('password')
+
+
+      console.log(password, email)
+
+      const Login = () => {
+        setEmail('')
+        setPassword('')
+
+        dispatch(changePassword(password))
+        dispatch(changeEmail(email))
+        dispatch(setGoogleUser("true"))
+      }
+
+
+    
     return (
         <div className = {styles.allOfFerstPage}>
             <Header/>
@@ -106,20 +121,23 @@ export const FirstPage: React.FC<Props> = (props) =>{
                                 </div>
                                 <form className={styles.formEmail}>
                                     <input className = {styles.inputEmail}
-                                        type="email" placeholder="Email"     
+                                        type="email" placeholder="Email" 
+                                        value = {email}    
+                                        onChange = {(t) =>setPassword(t.target.value)}
                                         >
 
                                     </input>
                                 </form>
                                 <form className = {styles.forPassword}>
                                 <input className = {styles.inputPassword}
-                                        type="password" placeholder="Password"     
-                                        >
+                                        type="password" placeholder="Password"
+                                        value = {password}     
+                                       onChange = {(e) =>setEmail(e.target.value)} >
 
                                     </input>
                                 </form>
                                 <div className={styles.wrapperOfButtonLogin}>
-                                    <button className={styles.loginButton}>
+                                    <button className={styles.loginButton} onClick = {Login} >
                                         <p className = {styles.login}>Login</p>
                                     </button>
                                 </div>

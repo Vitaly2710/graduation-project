@@ -41,7 +41,7 @@ function App() {
           </Route>
           <Route path="/" exact>
             {loggedIn ? <Redirect to ="/weather"/> : <FirstPage/>}
-            <FirstPage></FirstPage>
+            
           </Route>
         </Switch>
       </div>

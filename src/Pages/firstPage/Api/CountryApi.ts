@@ -1,8 +1,9 @@
-import { AltSpellings, CapitalInfo } from "./Type"
+import { AltSpellings, CapitalInfo, Flags } from "./Type"
 
 interface Response {
     capitalInfo: CapitalInfo
     altSpellings: AltSpellings
+    flags:Flags
 }
 
 // : Promise<Response>
@@ -16,6 +17,5 @@ interface Response {
   export const fetchCountry = async (country:string): Promise <Response> => {
     const res = await fetch(`https://restcountries.com/v3.1/name/${country}`)
     const data = await res.json()
-    console.log(data[0])
     return data[0]
   }
