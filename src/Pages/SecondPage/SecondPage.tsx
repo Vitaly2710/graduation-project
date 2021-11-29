@@ -74,6 +74,7 @@ export const SecondPage: React.FC<Props> = (props) =>{
         setFactInSearch(fact)
         setGeoobject(geo_object)
         setForecasts(forecasts)
+        console.log(forecasts)
     }
 
 

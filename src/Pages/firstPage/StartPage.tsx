@@ -88,7 +88,7 @@ export const FirstPage: React.FC<Props> = (props) =>{
                                     <h2 className={styles.h2Main}>Naroch Lake</h2>
                                     </div>
                                 <div className = {styles.wrapperOfTime}>
-                                    <p className = {styles.time}>{day}:{month}:{year}</p>
+                                    <p className = {styles.time}>{day}:{++month}:{year}</p>
                                 </div>
                             </div>
                             <div className = {styles.weatherFact}>
