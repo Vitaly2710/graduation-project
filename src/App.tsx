@@ -19,6 +19,7 @@ import { SecondPage } from './Pages/SecondPage/SecondPage';
 
 function App() {
   const loggedIn = useAppSelector(selectGoogleUser);
+  console.log(loggedIn)
   return (
       <Router>
       <div style = {{position: "relative"}}>
